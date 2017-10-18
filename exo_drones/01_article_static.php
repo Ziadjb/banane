@@ -17,8 +17,7 @@
         destinée à des missions (ex. : de surveillance, de renseignement, d'exploration,
         de combat, de transport, etc.). Les drones ont d'abord été utilisés au profit
         des forces armées ou de sécurité — police, douane, etc. — d'un État, mais ont aussi
-        des applications civiles (Cinéma, télévision, agriculture, environnement) ou cinématographiques1.
-        La charge utile du drone de combat ou UCAV (Unmanned Combat Aerial Vehicle) en fait une arme.</p>
+        des applications civiles (Cinéma, télévision, agriculture, environnement) ou cinématographiques1.</p>
 </div>
 <div class="reaction">
     <p class="etiquette">3 commentaire(s) Laissez le vôtre ! :)</p>
