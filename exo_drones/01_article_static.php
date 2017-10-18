@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<?php include_once('pdo.inc.php'); ?><!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8">
