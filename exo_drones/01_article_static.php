@@ -15,7 +15,7 @@
         ou encore RPAS (Remotely Piloted Aircraft Systems), est un aéronef sans personne à bord,
         télécommandé ou autonome, qui peut éventuellement emporter une charge utile,
         destinée à des missions (ex. : de surveillance, de renseignement, d'exploration,
-        de combat, de transport, etc.). Les drones ont d'abord été utilisés au profit
+        de combat, de transport, etc.). Les drones ont d'abord SALUT été utilisés au profit
         des forces armées ou de sécurité — police, douane, etc. — d'un État, mais ont aussi
         des applications civiles (Cinéma, télévision, agriculture, environnement) ou cinématographiques1.</p>
 </div>
