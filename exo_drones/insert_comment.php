@@ -2,13 +2,6 @@
 
 include_once('pdo.inc.php');
 
-$_POST = [
-	"prenom" => "Clitorine",
-	"email" => "clitorine@gmail.com",
-	"commentaire" => "Un super commentaire de Clitorine :)",
-	"date" => date('Y:m:d H:i:s')
-];
-
 if(isset($_POST) && !empty($_POST['prenom'])) {
 	try {
 		$sql = "INSERT INTO commentaires(prenom, email, commentaire, date) VALUES (:prenom, :email, :commentaire, :date)";
@@ -25,3 +18,10 @@ if(isset($_POST) && !empty($_POST['prenom'])) {
 		die('Erreur SQL ' . $e->getMessage());
 	}
 }
+
+
+/*
+* Récupérer le dernier commentaire qui est dans le JSON que Céline m'envoie
+* Comparer l'id dans le JSON à l'id en base
+* S'il y a d'autres id commentaires supérieur à l'id envoyé alors on récupère ces commentaires et on les mets dans un Json.
+*/

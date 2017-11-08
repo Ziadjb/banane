@@ -23,20 +23,21 @@
 <div class="reaction">
     <p class="etiquette">3 commentaire(s) Laissez le vôtre ! :)</p>
 
-    <form method="POST" action="">
+    <form method="POST" action="insert_comment.php">
         <div class="saisie">
             <div class="user clearfix">
                 <div class="prenom">
                     <label for="prenom">Votre prénom</label>
-                    <input id="prenom" type="text" />
+                    <input id="prenom" name="prenom" type="text" />
                 </div>
                 <div class="email">
                     <label for="email">Votre email</label>
-                    <input id="email" type="text" />
+                    <input id="email" name="email" type="text" />
                 </div>
             </div>
             <label for="commentaire">Commentaire</label>
-            <textarea id="commentaire"></textarea>
+            <textarea id="commentaire" name="commentaire"></textarea>
+            <input type="hidden" name="date" value="<?= date('Y:m:d H:i:s'); ?>">
         </div>
         <p class="etiquette">
             <button type="reset">EFFACER</button>
