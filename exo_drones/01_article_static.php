@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
 <body style="height:5000px;">
-<h1>Les drones de plus en plus présents</h1>
+<h1 data-id-article='10' id="titre">Les drones de plus en plus présents</h1>
 
 <div class="article clearfix">
-    <img src="photos/drone.jpg" alt="drone volant"/>
+    <img src="photos/drone.jpg" alt="drone volant" id="images_toto"/>
 
-    <p>Un drone (de l'anglais « faux-bourdon »), également appelé UAV (pour Unmanned Aerial Vehicle),
+    <p id="texte">Un drone (de l'anglais « faux-bourdon »), également appelé UAV (pour Unmanned Aerial Vehicle),
         ou encore RPAS (Remotely Piloted Aircraft Systems), est un aéronef sans personne à bord,
         télécommandé ou autonome, qui peut éventuellement emporter une charge utile,
         destinée à des missions (ex. : de surveillance, de renseignement, d'exploration,
@@ -19,6 +19,24 @@
         des forces armées ou de sécurité — police, douane, etc. — d'un État, mais ont aussi
         des applications civiles (Cinéma, télévision, agriculture, environnement) ou cinématographiques1.</p>
 </div>
+
+<div id="formulaire" class="rectangle_formulaire">
+    <form method="POST" action="recherche">
+        <div class="destination">
+            <select name="departement" class="ville" data-language="fr" title="Département">
+            <option class="option" value=""> Villes </option>
+                <option value="Paris"> Drone </option>
+                <option value="Marseille"> Danse </option>
+                <option value="Lyon"> Foot </option>
+                <option value="Bordeau"> Musique </option>
+                <option value="Toulouse"> Pokemon </option>
+            </select>
+        </div>
+    </form>
+</div>
+
+<button id="monBouton">Clic</button>
+
 <div class="reaction">
     <p class="etiquette">3 commentaire(s) Laissez le vôtre ! :)</p>
 
@@ -63,6 +81,10 @@
 
         <p class="texte">@Arnaud. Arrête d'être parano ! :)</p>
     </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" ></script>
+<script src="js/gestion_article.js"></script>
+
+
 
 </body>
 </html>
