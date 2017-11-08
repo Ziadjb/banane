@@ -4,46 +4,48 @@
     <meta charset="utf-8">
     <title>Les drones</title>
     <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body style="height:5000px;">
-<h1>Les drones de plus en plus présents</h1>
+    <h1>Les drones de plus en plus présents</h1>
 
-<div class="article clearfix">
-    <img src="photos/drone.jpg" alt="drone volant"/>
+    <div class="article clearfix">
+        <img src="photos/drone.jpg" alt="drone volant"/>
 
-    <p>Un drone (de l'anglais « faux-bourdon »), également appelé UAV (pour Unmanned Aerial Vehicle),
-        ou encore RPAS (Remotely Piloted Aircraft Systems), est un aéronef sans personne à bord,
-        télécommandé ou autonome, qui peut éventuellement emporter une charge utile,
-        destinée à des missions (ex. : de surveillance, de renseignement, d'exploration,
-        de combat, de transport, etc.). Les drones ont d'abord été utilisés au profit
-        des forces armées ou de sécurité — police, douane, etc. — d'un État, mais ont aussi
-        des applications civiles (Cinéma, télévision, agriculture, environnement) ou cinématographiques1.</p>
-</div>
-<div class="reaction">
-    <p class="etiquette">3 commentaire(s) Laissez le vôtre ! :)</p>
+        <p>Un drone (de l'anglais « faux-bourdon »), également appelé UAV (pour Unmanned Aerial Vehicle),
+            ou encore RPAS (Remotely Piloted Aircraft Systems), est un aéronef sans personne à bord,
+            télécommandé ou autonome, qui peut éventuellement emporter une charge utile,
+            destinée à des missions (ex. : de surveillance, de renseignement, d'exploration,
+            de combat, de transport, etc.). Les drones ont d'abord été utilisés au profit
+            des forces armées ou de sécurité — police, douane, etc. — d'un État, mais ont aussi
+            des applications civiles (Cinéma, télévision, agriculture, environnement) ou cinématographiques1.
+            La charge utile du drone de combat ou UCAV (Unmanned Combat Aerial Vehicle) en fait une arme.</p>
+    </div>
+    <div class="reaction">
+        <p class="etiquette">3 commentaire(s) Laissez le vôtre ! :)</p>
 
-    <form>
-        <div class="saisie">
-            <div class="user clearfix">
-                <div class="prenom">
-                    <label for="prenom">Votre prénom</label>
-                    <input id="prenom" type="text" />
+        <form id="form_add_commentaire">
+            <div class="saisie">
+                <div class="user clearfix">
+                    <div class="prenom">
+                        <label for="prenom">Votre prénom</label>
+                        <input id="prenom" type="text" />
+                    </div>
+                    <div class="email">
+                        <label for="email">Votre email</label>
+                        <input id="email" type="text" />
+                    </div>
                 </div>
-                <div class="email">
-                    <label for="email">Votre email</label>
-                    <input id="email" type="text" />
-                </div>
+                <label for="commentaire">Commentaire</label>
+                <textarea id="commentaire"></textarea>
             </div>
-            <label for="commentaire">Commentaire</label>
-            <textarea id="commentaire"></textarea>
-        </div>
-        <p class="etiquette">
-            <button type="reset">EFFACER</button>
-            <button type="submit">ENVOYER</button>
-        </p>
-    </form>
-</div>
-<div class="separation"></div>
+            <p class="etiquette">
+                <button type="reset">EFFACER</button>
+                <button type="submit">ENVOYER</button>
+            </p>
+        </form>
+    </div>
+    <div class="separation"></div>
 
     <div id="commentaire_1" class="commentaire">
         <p class="pseudo">Romain
@@ -65,4 +67,38 @@
     </div>
 
 </body>
+
+<script type="text/javascript">
+
+
+
+//var comments = "<div id="++" class="commentaire"><p class="pseudo">Romain<span class="date">Publié le 17/02/2015 à 19:16</span></p><p class="texte">Vivement la commercialisation de ces joujoux ! :p</p></div>"
+
+
+//$("body").html(comments);
+
+
+    $(document).ready ( function(){
+        $("#form_add_commentaire").submit(function(){
+            $.post("test.php",$("#form_add_commentaire").serialize(), function(msg){
+                /*if(msg==1){
+                    $("body").html( $("body").html()+"not good");
+                    return false;
+                } else {*/
+                    var jsonString = [{ "prenom": "PRENOM1", "commentaire": "COMMENTAIRE1", "id": "2", "date": "06-10-2017", "email": "EMAIL1" }, { "prenom": "PRENOM2", "commentaire": "COMMENTAIRE2", "id": "3", "date": "07-10-2017", "email": "EMAIL2" }];
+                    console.log(jsonString);
+                    var comments = "";
+                    jsonString.forEach(function(element) {
+                       comments = comments + "<div id="+element['id']+" class='commentaire'><p class='pseudo'>"+element['prenom']+"<span class='date'>Publié le "+element['date']+"</span></p><p class='texte'>"+element['commentaire']+"</p></div>";
+                    });
+                    console.log(comments);
+                    $("body").html( $("body").html()+comments);
+                    return false;
+                /*}*/
+            });
+            return false; //ne change pas de page
+        });
+    });
+</script>
+
 </html>
