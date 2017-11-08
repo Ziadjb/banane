@@ -22,7 +22,7 @@
 <div class="reaction">
     <p class="etiquette">3 commentaire(s) Laissez le vôtre ! :)</p>
 
-    <form>
+    <form method="POST" action="">
         <div class="saisie">
             <div class="user clearfix">
                 <div class="prenom">
