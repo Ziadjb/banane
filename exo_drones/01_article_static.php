@@ -1,5 +1,5 @@
 <?php include_once('pdo.inc.php'); ?>
-<?php include 'select_commentaire.php' ?><!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8">
@@ -64,17 +64,5 @@
 
         <p class="texte">@Arnaud. Arrête d'être parano ! :)</p>
     </div>
-
-<?php 
-    foreach ($outp as $value) {
-        echo '<p>$value["prenom"]</p>';
-
-        echo '<p>$value["email"]</p>';
-
-        echo '<p>$value["commentaire"]</p>';
-
-        echo '<p>$value["date"]</p>';
-    }
-?>
 </body>
 </html>
