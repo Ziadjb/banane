@@ -1,12 +1,15 @@
 <?php
+include('pdo.inc.php');
 header("Content-Type: application/json; charset=UTF-8");
 
-$obj = json_decode($_GET["commentaires"], false);
+/*$_POST['prenom'] = 'Ibrahim';
+$_POST['id'] = 'Ibrahim';
+$_POST['commentaire'] = 'Ibrahim';*/
 
-$conn = 
-$result = $conn->query("SELECT id , prenom , email , commentaire , date FROM ".$obj->table.);
+$conn = $pdo;
+$result = $conn->query("SELECT * FROM commentaires");
 $outp = array();
 $outp = $result->fetch_all;
 
-echo json_encode($outp);
+$jsonFinal = json_encode($outp);
 ?>
