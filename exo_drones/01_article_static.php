@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<?php include_once('pdo.inc.php'); ?><!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8">
@@ -16,15 +16,14 @@
             ou encore RPAS (Remotely Piloted Aircraft Systems), est un aéronef sans personne à bord,
             télécommandé ou autonome, qui peut éventuellement emporter une charge utile,
             destinée à des missions (ex. : de surveillance, de renseignement, d'exploration,
-            de combat, de transport, etc.). Les drones ont d'abord été utilisés au profit
+            de combat, de transport, etc.). Les drones ont d'abord SALUT été utilisés au profit
             des forces armées ou de sécurité — police, douane, etc. — d'un État, mais ont aussi
-            des applications civiles (Cinéma, télévision, agriculture, environnement) ou cinématographiques1.
-            La charge utile du drone de combat ou UCAV (Unmanned Combat Aerial Vehicle) en fait une arme.</p>
+            des applications civiles (Cinéma, télévision, agriculture, environnement) ou cinématographiques1.</p>
     </div>
     <div class="reaction">
         <p class="etiquette">3 commentaire(s) Laissez le vôtre ! :)</p>
 
-        <form id="form_add_commentaire">
+        <form  method="POST" action="" id="form_add_commentaire">
             <div class="saisie">
                 <div class="user clearfix">
                     <div class="prenom">
